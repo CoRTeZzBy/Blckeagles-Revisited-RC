@@ -22,6 +22,14 @@
 */
 #include "\q\addons\custom_server\Configs\blck_defines.hpp";
 
+#ifdef GRGserver
+if (isNil "serverTimeOfDayLogged") then 
+{
+	serverTimeOfDayLogged = true;
+	diag_log format["blckeagls] time acceleration logging: daytime = %1",daytime];
+};
+#endif 
+
 private ["_arr","_sunrise","_sunset","_time"];
 _arr = date call BIS_fnc_sunriseSunsetTime;
 _sunrise = _arr select 0;

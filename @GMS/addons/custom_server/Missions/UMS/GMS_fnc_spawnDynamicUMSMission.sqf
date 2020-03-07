@@ -231,6 +231,8 @@ if (blck_useStatic && ((_noEmplacedToSpawn > 0)) || count _missionEmplacedWeapon
 };
 
 uiSleep _delayTime;
+if (isNil "blck_UMS_crates") then {blck_UMS_crates = blck_crateTypes};
+if (blck_UMS_crates isEqualTo []) then {blck_UMS_crates = blck_crateTypes};
 if (_spawnCratesTiming isEqualTo "atMissionSpawnGround") then
 {
 	if (count _missionLootBoxes > 0) then

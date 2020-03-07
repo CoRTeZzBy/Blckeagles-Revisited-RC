@@ -48,7 +48,7 @@ if (blck_modType isEqualTo "Epoch") then
 	};
 	//diag_log format["_fnc_spawnUnit: for unit %1 Crypto set to %2",_unit,_unit getVariable "Crypto"];	
 };
-if (blck_modType isEqualTo "Exile") then
+if !(blck_modType isEqualTo "Epoch") then
 {
 	"i_g_soldier_unarmed_f" createUnit [_pos, _aiGroup, "_unit = this", blck_baseSkill, "COLONEL"];
 	switch(_skillLevel) do
